@@ -7,9 +7,9 @@ pub fn Home() -> impl IntoView {
     view! {
         <ErrorBoundary fallback=|errors| {
             view! {
-                <h1>"Uh oh! Something went wrong!"</h1>
+                <h1 class="text-center p-8">"Uh oh! Something went wrong!"</h1>
 
-                <p>"Errors: "</p>
+                <p class="m-6">"Errors: "</p>
                 // Render a list of errors as strings - good for development purposes
                 <ul>
                     {move || {
@@ -24,9 +24,9 @@ pub fn Home() -> impl IntoView {
             }
         }>
 
-            <div class="container">
+            <div class="flex flex-col justify-around items-center">
 
-                <picture>
+                <picture class="block mx-auto text-center m-8">
                     <source
                         srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
                         media="(prefers-color-scheme: dark)"
@@ -39,9 +39,9 @@ pub fn Home() -> impl IntoView {
                     />
                 </picture>
 
-                <h1>"Welcome to Leptos"</h1>
+                <h1 class="text-center mx-auto p-8">"Welcome to Leptos"</h1>
 
-                <div class="buttons">
+                <div class="flex justify-evenly">
                     <Button />
                     <Button increment=5 />
                 </div>
